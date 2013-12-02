@@ -55,6 +55,8 @@ class ReduxFramework_sortable {
             $value_display = isset($this->value[$k]) ? $this->value[$k] : '';
             echo '<li>';
             
+            echo '<label for="' . $this->field['id'] . '[' . $k . ']"><strong>' . $options[$k] . '</strong></label>';
+
             $checked = "";
             $name = $this->args['opt_name'] . '[' . $this->field['id'] . '][' . $k . ']';
 
@@ -77,7 +79,7 @@ class ReduxFramework_sortable {
                 if ( $this->field['mode'] != "checkbox" ) {
                     echo "<br />";
                 }
-                echo '<label for="' . $this->field['id'] . '[' . $k . ']"><strong>' . $options[$k] . '</strong></label>';
+                // echo '<label for="' . $this->field['id'] . '[' . $k . ']"><strong>' . $options[$k] . '</strong></label>';
 
             }
             if ( $this->field['mode'] == "checkbox") {
